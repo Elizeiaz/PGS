@@ -4,7 +4,7 @@
 Задача: сопоставить ID компонентов 1С с записями из новой бд PostgreSQL
 
 Для удобства данные из 1С конвертируются в Excel лист.
-![Здесь должно быть изображение](https://github.com/Elizeiaz/PGS/tree/main/Resources/fill1C.png?raw=true)
+![Здесь должно быть изображение](Resources/fill1C.png)
 
 ```
 Использовал:
