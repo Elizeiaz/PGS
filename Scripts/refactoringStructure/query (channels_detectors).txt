@@ -1,0 +1,5 @@
+INSERT INTO lab.channels_detectors (device, name)
+SELECT deviceid, detectors.name
+FROM lab.devicedetectors
+LEFT JOIN lab.devices ON devices.id = deviceid
+LEFT JOIN lab.detectors ON detectors.id = detectorid

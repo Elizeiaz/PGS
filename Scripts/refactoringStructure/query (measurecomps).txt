@@ -1,0 +1,9 @@
+UPDATE lab.measurecomps as updatable_measurecomps SET detectorid = 
+(
+SELECT c_d.id
+FROM lab.measurecomps
+LEFT JOIN lab.measures ON measurecomps.measureid = measures.id
+LEFT JOIN lab.detectors ON measurecomps.detectorid = detectors.id
+LEFT JOIN lab.channels_detectors AS c_d ON measures.deviceid = c_d.device AND detectors.name = c_d.name
+WHERE updatable_measurecomps.id = measurecomps.id
+)
