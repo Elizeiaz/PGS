@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7E83DC75-D081-4571-852A-BAC48C604A4F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PGS.DMS</RootNamespace>
+    <AssemblyName>DMS</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <LangVersion>6.0</LangVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <LangVersion>default</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>default</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DB, Version=1.0.0.0, Culture=neutral, PublicKeyToken=aaf559f9c57e5514, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Common\DB\bin\Release\DB.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\FileManager.cs" />
+    <Compile Include="Controllers\NetworkDriver.cs" />
+    <Compile Include="Controllers\Unc.cs" />
+    <Compile Include="Models\Document.cs" />
+    <Compile Include="Models\DocumentGroup.cs" />
+    <Compile Include="Models\File.cs" />
+    <Compile Include="Models\NetworkFolder.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FormDmsBrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormDmsBrowser.Designer.cs">
+      <DependentUpon>FormDmsBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FormDmsSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormDmsSetting.Designer.cs">
+      <DependentUpon>FormDmsSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FormDocumentEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormDocumentEdit.Designer.cs">
+      <DependentUpon>FormDocumentEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FormFileEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormFileEdit.Designer.cs">
+      <DependentUpon>FormFileEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FormDmsGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormDmsGroup.Designer.cs">
+      <DependentUpon>FormDmsGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserControlDocumentEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserControlDocumentEdit.Designer.cs">
+      <DependentUpon>UserControlDocumentEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserControlPathNavigator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserControlPathNavigator.Designer.cs">
+      <DependentUpon>UserControlPathNavigator.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormDmsBrowser.resx">
+      <DependentUpon>FormDmsBrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormDmsSetting.resx">
+      <DependentUpon>FormDmsSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormDocumentEdit.resx">
+      <DependentUpon>FormDocumentEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormFileEdit.resx">
+      <DependentUpon>FormFileEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormDmsGroup.resx">
+      <DependentUpon>FormDmsGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserControlDocumentEdit.resx">
+      <DependentUpon>UserControlDocumentEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserControlPathNavigator.resx">
+      <DependentUpon>UserControlPathNavigator.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-open-folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list-add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list-remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view-list-tree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-txt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list-add1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list-remove1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-edit1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dialog-cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dialog-ok-apply.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\opinion-okay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view-list-text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view-list-icons.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player-time.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tab-new-background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\archive-insert-directory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-remove4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view-list-details.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view-right-new1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view-right-close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smallArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrowUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrowRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrowLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pathArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RevisionMode.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -62,8 +62,6 @@ ___
 
 ![Готовый паспорт](../../Resources/printedPassport.JPG)
 
-___
-
 ```
 Использовал:
   .Net 4.0
